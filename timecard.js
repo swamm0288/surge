@@ -76,11 +76,11 @@ function datenotice() {
 //>图标依次切换乌龟、兔子、闹钟、礼品盒
 function icon_now(num){
   if(num<=7 && num>3 ){
-    return "hare"
+    return "tortoise"
   }else if(num<=3 && num>0){
-    return "timer"
+    return "tortoise"
   }else if(num==0){
-    return "gift"
+    return "tortoise"
   }else{
     return "tortoise"
   }
@@ -88,6 +88,7 @@ function icon_now(num){
 
 $done({
 title:title_random(tnumcount(Number(nowlist))),
+'icon-color':'#8CB2D6',
 icon:icon_now(tnumcount(Number(nowlist))),
 content:tlist[nowlist][0]+":"+today(tnumcount(nowlist))+","+tlist[Number(nowlist) + Number(1)][0] +":"+ tnumcount(Number(nowlist) + Number(1))+ "天,"+tlist[Number(nowlist) + Number(2)][0]+":"+tnumcount(Number(nowlist) + Number(2))+"天"
 })
